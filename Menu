@@ -1,0 +1,69 @@
+//-----------------------------------------------------------------------------
+// Menu.java
+//-----------------------------------------------------------------------------
+
+import java.io.*; // pour la fonction lireClavier uniquement
+import java.sql.*; 
+
+class Menu {    
+
+    static void creerVillage() {
+	System.out.println("ici traitement1");
+    String ville = lireClavier("Entrez la ville :");
+    String activite = lireClavier("Entrez l'activite':");
+    int prix= Integer.parseInt(lireClavier("Entrez votre prix: "));
+    int capacite= Integer.parseInt(lireClavier("Entrez votre capacite "));
+    int id= Integer.parseInt(lireClavier("Entrez votre id "));
+    
+    String requetCreation = "INSERT INTO village(ville,activite,prix,capacite,idc) Values("+ville+",'"+activite+"','"+prix+"','"+capacite+"','"+id+"')";
+    System.out.println(requetCreation);
+    s.executeUpdate(requetCreation);
+    s.close();
+
+    }
+
+    static void traitement3() {
+	System.out.println("ici traitement3");
+
+    }
+
+    static String lireClavier(String message) {
+	// Dans cette fonction l'exception est catchee pour ne pas avoir a la 
+        // gerer dans le main, et donc mieux voir les exceptions BD. 
+	try {
+            System.out.print(message);
+	    BufferedReader clavier =
+		new BufferedReader(new InputStreamReader(System.in));
+	    return clavier.readLine();
+	} catch (Exception e) {
+	    return "erreur dans fonction lireClavier";
+	}
+    }
+
+    public static void main(String[] args)
+
+    //Création de la connexion à la base de données
+        throws SQLException{
+        //Class.forName("oracle.jdbc.driver.OracleDriver");
+        Connection connect = DriverManager.getConnection("jdbc:oracle:thin:c##mndampe/mndampe_a@tp-oracle:1522:dbinfo");
+        Statement s = connect.createStatement();
+      
+
+	
+	while (true) {
+	    System.out.println("-------------------------------");
+	    System.out.println("Bienvenue dans le menu Menu");
+	    System.out.println("1 : creerVillage");
+	    System.out.println("2 : traitement3");
+	    System.out.println("0 : terminer");
+	    int n = Integer.parseInt(lireClavier("Entrez votre choix : "));
+	    switch (n) {
+	    case 1 : creerVillage(); break;
+	    case 3 : traitement3(); break;
+	    case 0 : connect.close();return;
+	    }
+	}
+    }
+}
+
+//-----------------------------------------------------------------------------

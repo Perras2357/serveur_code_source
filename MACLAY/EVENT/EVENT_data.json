@@ -1,0 +1,34 @@
+{
+    "ABBANE": {
+        "nom": "ABBANE",
+        "prenom": "ABBANE",
+        "min": "X",
+        "id": "ABBANE ABBANE",
+        "email": "samira.abbane@universite-paris-saclay.fr",
+        "filiere": "MIAGE",
+        "grp": "aucun",
+        "preweb": "off",
+        "prephp": "off",
+        "prejs": "off",
+        "english": "anglais : 100",
+        "partner": "MARCE_Olivier",
+        "origine": "PUIO",
+        "commentaires": "yyyyyyyyyyyyy"
+    },
+    "BOURGUIBA": {
+        "nom": "BOURGUIBA",
+        "prenom": "BOURGUIBA",
+        "min": "X",
+        "id": "BOURGUIBA BOURGUIBA",
+        "email": "yousra.bourguiba@universite-paris-saclay.fr",
+        "filiere": "MIAGE",
+        "grp": "aucun",
+        "preweb": "off",
+        "prephp": "off",
+        "prejs": "off",
+        "english": "anglais : 75",
+        "partner": "MARCE_Olivier",
+        "origine": "PUIO",
+        "commentaires": "aaaaaaaaaaaaaaaaaaaaa"
+    }
+}
