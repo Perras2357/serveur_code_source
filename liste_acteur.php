@@ -5,8 +5,8 @@
     //elements de connexion à la base de données
     $host = 'localhost' ;
     $dbname = 'serveur_code_source' ;
-    $client = 'root' ;
-    $mdp = '' ;
+    $client = 'perras' ;
+    $mdp = 'Mdp*2357' ;
 
     //Appel de fichiers
     require("function/fonctions.php");
